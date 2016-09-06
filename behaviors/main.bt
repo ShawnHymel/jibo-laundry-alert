@@ -1,0 +1,171 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "",
+        "asset-pack": "core",
+        "children": [
+            4,
+            6,
+            "f5c93af7-1722-4c77-8af2-4b4e6eec6a87"
+        ],
+        "decorators": [],
+        "options": {}
+    },
+    "4": {
+        "id": 4,
+        "class": "PlayAnimation",
+        "name": "Play a greeting",
+        "asset-pack": "core",
+        "parent": 1,
+        "options": {
+            "animPath": "greeting.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        }
+    },
+    "6": {
+        "id": 6,
+        "class": "PlayAudio",
+        "name": "Bawhoop",
+        "asset-pack": "core",
+        "parent": 1,
+        "options": {
+            "audioPath": "FX_Bawhoop.mp3"
+        }
+    },
+    "meta": {
+        "version": 1
+    },
+    "f5c93af7-1722-4c77-8af2-4b4e6eec6a87": {
+        "id": "f5c93af7-1722-4c77-8af2-4b4e6eec6a87",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "41a8a15d-a83e-415c-8be3-df7bcd22590e",
+            "cea8cb96-6598-4996-a3eb-cf2282b78458"
+        ]
+    },
+    "41a8a15d-a83e-415c-8be3-df7bcd22590e": {
+        "id": "41a8a15d-a83e-415c-8be3-df7bcd22590e",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "idle.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "f5c93af7-1722-4c77-8af2-4b4e6eec6a87",
+        "decorators": [
+            "40890e62-e5b1-4df8-a48a-d3e014fe581e"
+        ]
+    },
+    "40890e62-e5b1-4df8-a48a-d3e014fe581e": {
+        "id": "40890e62-e5b1-4df8-a48a-d3e014fe581e",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "cea8cb96-6598-4996-a3eb-cf2282b78458": {
+        "id": "cea8cb96-6598-4996-a3eb-cf2282b78458",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "f5c93af7-1722-4c77-8af2-4b4e6eec6a87",
+        "decorators": [
+            "6f6abb7f-4612-44f3-bec1-8f92398dcbf8"
+        ],
+        "children": [
+            "c2d03620-b1e7-42a9-84a9-a4ece6014594",
+            "4c9715ac-5bae-451e-be42-eb8bb7423106"
+        ]
+    },
+    "6f6abb7f-4612-44f3-bec1-8f92398dcbf8": {
+        "id": "6f6abb7f-4612-44f3-bec1-8f92398dcbf8",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "c2d03620-b1e7-42a9-84a9-a4ece6014594": {
+        "id": "c2d03620-b1e7-42a9-84a9-a4ece6014594",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "The laundry is done.",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "cea8cb96-6598-4996-a3eb-cf2282b78458",
+        "decorators": [
+            "dde9c0f1-00bf-4f39-ba2b-80f64cf7e757"
+        ]
+    },
+    "dde9c0f1-00bf-4f39-ba2b-80f64cf7e757": {
+        "id": "dde9c0f1-00bf-4f39-ba2b-80f64cf7e757",
+        "class": "StartOnEvent",
+        "name": "",
+        "options": {
+            "eventName": "laundry",
+            "onEvent": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "4c9715ac-5bae-451e-be42-eb8bb7423106": {
+        "id": "4c9715ac-5bae-451e-be42-eb8bb7423106",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "laundry-done.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "cea8cb96-6598-4996-a3eb-cf2282b78458"
+    }
+}
