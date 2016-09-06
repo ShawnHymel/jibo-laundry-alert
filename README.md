@@ -8,5 +8,5 @@ The Laundry Alert is a new skill for the Jibo robot. It uses a Particle Photon a
 Documentation
 -------------
 
-[Step-by-step Tutorial](https://www.hackster.io/ShawnHymel/jibo-laundry-alert-fedc22)
-[Jibo SDK & API Documentation](https://developers.jibo.com/sdk/docs/)
+ * [Step-by-step Tutorial](https://www.hackster.io/ShawnHymel/jibo-laundry-alert-fedc22)
+ * [Jibo SDK & API Documentation](https://developers.jibo.com/sdk/docs/)
